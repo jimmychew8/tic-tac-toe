@@ -11,7 +11,9 @@ import sys
 #global matrix value that will serve as tic-tac-toe grid 
 matrix = [[" "," "," "],[" "," "," "],[" "," "," "]]
 
-#returns user input for row position
+"""
+returns user input for row position
+"""
 def PlacementX():
     while True: 
     	# asks the user to pick a ROW to move in, and checks to see if user has specified a row, 
@@ -39,7 +41,10 @@ def PlacementX():
     	x = 0
     	return x
 
-#returns user input for column position
+"""
+returns user input for column position
+"""
+
 def PlacementY(): 
 	# asks the user to pick a COLUMN to move in, and checks to see if user has specified a column, 
     # asks until the user inputs some form of left, middle, or right. 
@@ -64,7 +69,10 @@ def PlacementY():
 		return y
 
 
-#handles a one complete turn (users move, then computer's move), and checks for a win 
+"""
+handles a one complete turn (user's move, then computer's move), checks for a winning senario  
+"""
+
 def move(x):
 	turn = x
 	while True: 
@@ -101,8 +109,10 @@ def move(x):
 	for row in matrix:
 		print row
 
+"""
+defines conditions for a win
+"""
 
-#defining conditions for a win
 def check():
 	if matrix[0][0] == matrix[0][1] == matrix[0][2] != " " or \
 	matrix[1][0] == matrix[1][1] == matrix[1][2] != " " or \
@@ -118,10 +128,14 @@ def check():
 		return 1
 
 
-#runs game 
+"""
+runs game 
+"""
+
 def main():
 	for x in range(0,5):
 		move(x)
 
+# for good measure 
 if __name__ == '__main__': 
 	main()
