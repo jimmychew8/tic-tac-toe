@@ -110,7 +110,7 @@ def move(x):
 		print row
 
 """
-defines conditions for a win
+defines winning senario 
 """
 
 def check():
