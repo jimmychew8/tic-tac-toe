@@ -127,15 +127,9 @@ def check():
 	else: 
 		return 1
 
-
-"""
-runs game 
-"""
-
 def main():
 	for x in range(0,5):
 		move(x)
 
-# for good measure 
 if __name__ == '__main__': 
 	main()
